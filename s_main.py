@@ -30,7 +30,7 @@ model_name = "Qwen/Qwen2.5-Coder-3B-Instruct"
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 print("Device: ", device)
 
-tokenizer = AutoTokenizer.from_pretrained(model_name)
+tokenizer = AutoTokenizer.from_pretrained("/home/qwen2.5-coder")
 model = AutoModelForCausalLM.from_pretrained(model_name, device_map=device).eval()
 
 nvmem.printMemoryUsed()
